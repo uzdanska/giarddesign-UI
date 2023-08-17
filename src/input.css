@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "pop";
+    src: url("../dist/assets/Inter-Regular.ttf");
+}
+
+.beige-gradient {
+    background: #fed7aa; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #c8ab8b,
+      #edcca5
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #c8ab8b,
+      #edcca5
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }

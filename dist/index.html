@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script type="module" src="js/main.js"></script>
+    
 </head>
 <body>
   <div class="relative z-0 bg-white">
@@ -130,8 +130,8 @@
               <div class="px-6 pt-3 pb-3.5 bg-green rounded-full justify-start items-center gap-2.5 flex h-[40px] w-auto">
               <div class="text-center text-[12px] md:text-[16px] text-white font-normal leading-normal">Skontaktuj się z nami</div>
             </div>
-            <div class="px-5 pt-3 pb-3.5 rounded-full border border-green-900 justify-start items-center gap-2 flex h-[40px] w-auto">
-              <div class="text-center text-[12px] md:text-[16px] text-green-900 font-normal leading-normal">Zobacz nasze realizacje</div>
+            <div class="px-5 pt-3 pb-3.5 rounded-full border border-green justify-start items-center gap-2 flex h-[40px] w-auto">
+              <div class="text-center text-[12px] md:text-[16px] text-green font-normal leading-normal">Zobacz nasze realizacje</div>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@
   <div id="O firmie" class="bg-green relative w-full md:h-screen grid md:grid-cols-2 gap-4">
     <div class="md:col-span-1 relative">
       <div class="h-full w-full absolute flex items-center justify-center">
-        <img src="assets/Hero_background.png" alt="" class="object-cover h-full w-full">
+        <img src="assets/O_Firmie.png" alt="" class="object-cover h-full w-full">
       </div>
     </div>
     <div class="md:col-span-1 relative pt-[70px]">
@@ -212,51 +212,75 @@
     </div>
     </div>
   </div>
-  <div id="Realizacja">
-
+  <div id="Realizacja" class="relative w-full h-auto sm:px-20 px-6 bg-white-200 pt-[70px]">
+      <p class="font-inter text-[12px] text-green">Realizacje</p>
+      <h2 class="font-montserrat text-3xl md:text-6xl">Nasze <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">projekty</span></h2>
+     <div class="grid mt-20" id="grid-realizacja">
+        <div class="grid-item"><img src="assets/Photo1.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo2.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo3.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo4.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo5.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo6.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo7.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo8.png" alt=""></div>
+        <div class="grid-item"><img src="assets/Photo9.png" alt=""></div>
+     </div>
   </div>
-  <div id="Kontakt" class="realtive bg-white w-full h-screen">
+  <div id="Kontakt" class="realtive bg-white w-full h-auto">
     <div class="sm:px-20 px-6 py-10 items-center justify-center">
-        <div class="bg-green rounded-[20px] py-10 px-7 min-h-[260px] justify-center text-center grid grid-cols-2 gap-4">
-          <div>
-            
+      <div class="bg-green rounded-[20px] py-10 px-7 min-h-[260px] flex justify-center items-center">
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="col-span-2 md:col-span-2 p-4 rounded-lg text-white-200 text-[40px]">
+              <p class="font-montserrat font-normal leading-120 tracking-tight">Zostańmy w kontakcie!</p>
+              <p class="font-montserrat font-normal leading-120 tracking-tight">Znajdź nas na <span class="tracking-wide text-inherit italic">Instagramie</span>.</p>
           </div>
-          <div></div>
-            <!-- <p class="text-3xl text-white">Zostańmy w kontakcie</p>
-            <p class="text-3xl text-white">Znajdz nas na instagramie</p> -->
-        </div>
+          <div class="col-span-1 md:col-span-1 bg-green-500 p-4 rounded-lg text-white-200">
+              <p class="text-[16px] font-montserrat-400 leading-120">Śledz nasze</p>
+              <p>najnowsze realizacje</p>
+              <div class="justify-start items-start sm:gap-4 gap-6 inline-flex mt-5">
+                <div class="px-6 pt-3 pb-3.5 bg-white-200 rounded-full justify-start items-center gap-2.5 flex w-auto">
+                <div class="text-center text-[12px] md:text-[16px] text-green font-normal leading-normal">Instagram</div>
+              </div>
+          </div>
+      </div>
+      </div>
     </div>
+    
   </div>
-
-</div>
-
-</body>
-<script>
-  function nav(){
-    if($('#nav_list_mobile_devices').hasClass("hidden")){
-      $('#nav_list_mobile_devices').removeClass("hidden")
-      $('#nav_icon').prop('src', 'assets/close.svg')
-    }
-    else{
-      $('#nav_list_mobile_devices').addClass("hidden")
-      $('#nav_icon').prop('src', 'assets/menu.svg')
-    }
   
-}
-$('#dropdownNavbarLink').on("click", function(){
-  if($('#dropdownNavbar').hasClass("hidden")){
-    $('#dropdownNavbar').removeClass('hidden')
-  }else{
-    $('#dropdownNavbar').addClass('hidden')
-  }
-})
 
-function loopClick(){
-  if($("#loopSearch").hasClass("hidden")){
-    $("#loopSearch").removeClass("hidden")
-  }else{
-    $("#loopSearch").addClass("hidden")
+  </div>
+  <script type="module" src="js/main.js"></script>
+  <!-- <script>
+    function nav(){
+      if($('#nav_list_mobile_devices').hasClass("hidden")){
+        $('#nav_list_mobile_devices').removeClass("hidden")
+        $('#nav_icon').prop('src', 'assets/close.svg')
+      }
+      else{
+        $('#nav_list_mobile_devices').addClass("hidden")
+        $('#nav_icon').prop('src', 'assets/menu.svg')
+      }
+    
   }
-}
-</script>
+  $('#dropdownNavbarLink').on("click", function(){
+    if($('#dropdownNavbar').hasClass("hidden")){
+      $('#dropdownNavbar').removeClass('hidden')
+    }else{
+      $('#dropdownNavbar').addClass('hidden')
+    }
+  })
+  
+  function loopClick(){
+    if($("#loopSearch").hasClass("hidden")){
+      $("#loopSearch").removeClass("hidden")
+    }else{
+      $("#loopSearch").addClass("hidden")
+    }
+  }
+  
+  </script> -->
+</body>
+
 </html>

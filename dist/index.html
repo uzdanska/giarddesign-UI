@@ -6,253 +6,311 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
   <div class="relative z-0 bg-white">
-    <div class="bg-beige bg-cover bg-no-repeat bg-center">
-  <nav class="bg-white sm:px-20 px-6 w-full fixed items-center py-5 top-0 z-20 gap-96">
-    <div class="w-full flex justify-between max-w-7xl   mx-auto">
-      <!-- Website Logo -->
-      <img src="assets/giarddesign.svg" alt="">
-
+    <div class="bg-cover bg-no-repeat bg-center">
+      <nav class="bg-white sm:px-20 px-6 w-full fixed items-center py-5 top-0 z-20 gap-96">
+        <div class="w-full flex justify-between max-w-7xl mx-auto">
+          <!-- Website Logo -->
+          <img src="assets/giarddesign.svg" alt="">
       
-      <!-- Primary Navbar items -->
-        <ul id="navbar-multi-level" class="list-non hidden sm:flex flex-row gap-8 font-medium">
-          <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center">Oferta      
-              <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
-              </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="hidden z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
-              <ul class="py-2 text-sm text-inherit" aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a href="#" class="block px-4 py-2 text-black-100  hover:text-green 0">Projekty</a>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 text-black-100 hover:text-green ">Wizualizacje</a>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 text-black-100 hover:text-green ">Realizacje</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-            <a href="#">O firmie</a>
-          </li>
-          <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-            <a href="#">Realizacje</a>
-          </li>
-          <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-            <a href="#">Kontakt</a>
-          </li>
-          <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-            <a href="#" onclick="loopClick()">
-              <img src="assets/loop.svg" alt="loop">
-            </a>
-          </li>
-        </ul>
-
-      <div class="sm:hidden flex flex-1 justify-end items-center">
-        <img src="assets/menu.svg" alt="menu_icon" class="w-[28px] h-[28px] object-contain cursor-pointer" id="nav_icon" onclick="nav()">
-        <div class="hidden p-6 beige-gradient absolute top-[60px] right-0 mx-4 my-2 z-10 rounded-xl" id="nav_list_mobile_devices">
-          <ul class="list-non flex justify-end items-start flex-col gap-4">
-            <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center">Oferta      
+          <!-- Primary Navbar items -->
+          <ul id="navbar-multi-level" class="list-non hidden sm:flex flex-row gap-8 font-medium">
+            <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+              <a id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center" href="#Oferta">Oferta      
                 <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
                 </svg>
-              </button>
+              </a>
+              <!-- Dropdown menu -->
               <div id="dropdownNavbar" class="hidden z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                 <ul class="py-2 text-sm text-inherit" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#" class="block px-4 py-2 text-black-100  hover:text-green 0">Projekty</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 text-black-100 hover:text-green">Wizualizacje</a>
+                    <a href="#" class="block px-4 py-2 text-black-100 hover:text-green ">Wizualizacje</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 text-black-100 hover:text-green">Realizacje</a>
+                    <a href="#" class="block px-4 py-2 text-black-100 hover:text-green ">Realizacje</a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
-              <a href="#">O firmie</a>
+            <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+              <a href="#OFirmie">O firmie</a>
             </li>
-            <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
-              <a href="#" >Realizacje</a>
+            <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+              <a href="#Realizacje">Realizacje</a>
             </li>
-            <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
-              <a href="#" >Kontakt</a>
+            <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+              <a href="#Kontakt">Kontakt</a>
             </li>
-            <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
-              <a href="#loop" >
+            <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+              <a href="#" onclick="loopClick()">
                 <img src="assets/loop.svg" alt="loop">
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
-    <div id="loopSearch"class="py-2 hidden">
-      <form class="flex items-end justify-end">   
-      <label for="voice-search" class="sr-only">Wyszukaj</label>
-      <div class="relative w-1/2">
-        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.15 5.6h.01m3.337 1.913h.01m-6.979 0h.01M5.541 11h.01M15 15h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 2.043 11.89 9.1 9.1 0 0 0 7.2 19.1a8.62 8.62 0 0 0 3.769.9A2.013 2.013 0 0 0 13 18v-.857A2.034 2.034 0 0 1 15 15Z"/>
-            </svg>
-        </div>
-        <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 " placeholder="Wyszukaj" required>
-      </div>
-      <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-        <svg class="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-        </svg>Search
-      </button>
-    </form>
-  </nav>
-  
-  <section class="relative w-full h-screen mx-auto grid md:grid-cols-2 gap-4 bg-beige translate-x-0 slide" id="hero">
-    <div class="md:col-span-1 relative">
-      <div class="h-full w-full absolute flex items-center justify-center">
-        <div class="w-full flex-col sm:px-20 px-6 pt-24 md:py-28 inline-flex">
-          <div class="self-stretch flex-col gap-4 md:gap-7 flex justify-center items-center">
-            <div class="self-stretch text-neutral-900 text-3xl md:text-6xl font-montserrat leading-15 text-start">Nowoczesna<br> aranżacja<br>Twojego ogrodu</div>
-            <div class="self-stretch text-neutral-900 text-[12px] md:text-[16px] font-montserrat leading-normal text-start">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
-            </div>
-            <div class="justify-start items-start sm:gap-4 gap-6 inline-flex">
-              <div class="px-6 pt-3 pb-3.5 bg-green rounded-full justify-start items-center gap-2.5 flex h-[40px] w-auto">
-              <div class="text-center text-[12px] md:text-[16px] text-white font-normal leading-normal">Skontaktuj się z nami</div>
-            </div>
-            <div class="px-5 pt-3 pb-3.5 rounded-full border border-green justify-start items-center gap-2 flex h-[40px] w-auto">
-              <div class="text-center text-[12px] md:text-[16px] text-green font-normal leading-normal">Zobacz nasze realizacje</div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div class="md:col-span-1 relative">
-      <div class="h-full w-full absolute flex items-center justify-center">
-        <img src="assets/Hero_background.png" alt="" class="object-cover h-full w-full">
-        <div class="absolute bottom-0 right-0 gap-11">
-            <div class="space-x-8 justify-center items-center inline-flex bg-white w-[192px] h-[96px]">
-              <img class="w-[48px] h-[48px]" src="assets/left_arrow.png" alt="">
-              <img class="w-[48px] h-[48px]"  src="assets/right_arrow.png" alt="">
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div id="Oferta" class="relative w-full md:h-screen sm:px-20 px-6 bg-white-200 pt-[70px]">
-    <div id="ofertaInfo" class="sm:px-20">
-      <p class="font-inter text-[12px] text-green">Oferta</p>
-      <h2 class="font-montserrat text-3xl md:text-6xl">Działamy <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">kompleksowo</span></h2>
-      <div class="sm:w-[550px] mt-5">
-        <p class="font-inter  text-[12px] md:text-[14px]">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
-      </div>
-    </div>
-    <div class="mt-11 flex flex-wrap gap-14">
-      <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-        <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
-          <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
-            <img src="assets/projekty.svg" alt="Web Developer" class="w-7 h-7 object-contain mb-5">              
-            <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Projekty</h3>
-            <p class="text-inherit text-[12px] leading-tight mb-10">Zaprojektujemy Twój ogród w nowoczesnym stylu z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
-            <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>  
-          </div>
-        </div>
-      </div>
-      <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-        <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
-          <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
-            <img src="assets/wizualizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
-            <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Wizualizacje</h3>
-            <p class="text-inherit text-[12px] leading-tight mb-10">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologi 3D.</p>
-            <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>
-          </div>
-        </div>
-      </div>
-      <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-        <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
-          <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
-            <img src="assets/realizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
-            <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Realizacje</h3>
-            <p class="text-inherit text-[12px] leading-tight mb-10">Zrealizuj Twoje marzenia przy użyciu najnowszych rozwiązań i zaawansowanych techonologi.</p>
-            <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="O firmie" class="bg-green relative w-full md:h-screen grid md:grid-cols-2 gap-4">
-    <div class="md:col-span-1 relative">
-      <div class="h-full w-full absolute flex items-center justify-center">
-        <img src="assets/O_Firmie.png" alt="" class="object-cover h-full w-full">
-      </div>
-    </div>
-    <div class="md:col-span-1 relative pt-[70px]">
-      <div id="ofertaInfo" class="sm:px-20 px-6">
-        <p class="font-inter text-[12px] text-white">O firmie</p>
-        <h2 class=" text-white font-montserrat text-3xl md:text-6xl">Tworzymy <br><span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">z pasją</span></h2>
-        <div class="sm:w-[500px] mt-5 mb-10">
-          <p class="text-white font-inter  text-[12px] md:text-[14px]">Każdy projekt to nowe wyzwanie, Dlatego nasz zespół tworzą wykwalifikowani projektancji oraz architekcji, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne,które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
-        </div>
-        <div class="justify-start items-start inline-flex">
-          <div class="px-6 pt-3 pb-3.5 bg-green rounded-full border border-white justify-start items-center gap-2.5 flex h-[40px] w-auto">
-          <div class="text-center text-[12px] md:text-[16px] text-white font-normal leading-normal">Poznaj nas bliżej -></div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-  <div id="Realizacja" class="relative w-full h-auto sm:px-20 px-6 bg-white-200 pt-[70px]">
-      <p class="font-inter text-[12px] text-green">Realizacje</p>
-      <h2 class="font-montserrat text-3xl md:text-6xl">Nasze <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">projekty</span></h2>
-     <div class="grid mt-20" id="grid-realizacja">
-        <div class="grid-item"><img src="assets/Photo1.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo2.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo3.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo4.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo5.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo6.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo7.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo8.png" alt=""></div>
-        <div class="grid-item"><img src="assets/Photo9.png" alt=""></div>
-     </div>
-  </div>
-  <div id="Kontakt" class="realtive bg-white w-full h-auto">
-    <div class="sm:px-20 px-6 py-10 items-center justify-center">
-      <div class="bg-green rounded-[20px] py-10 px-7 min-h-[260px] flex justify-center items-center">
-        <div class="grid grid-cols-3 gap-4 text-center">
-          <div class="col-span-2 md:col-span-2 p-4 rounded-lg text-white-200 text-[40px]">
-              <p class="font-montserrat font-normal leading-120 tracking-tight">Zostańmy w kontakcie!</p>
-              <p class="font-montserrat font-normal leading-120 tracking-tight">Znajdź nas na <span class="tracking-wide text-inherit italic">Instagramie</span>.</p>
-          </div>
-          <div class="col-span-1 md:col-span-1 bg-green-500 p-4 rounded-lg text-white-200">
-              <p class="text-[16px] font-montserrat-400 leading-120">Śledz nasze</p>
-              <p>najnowsze realizacje</p>
-              <div class="justify-start items-start sm:gap-4 gap-6 inline-flex mt-5">
-                <div class="px-6 pt-3 pb-3.5 bg-white-200 rounded-full justify-start items-center gap-2.5 flex w-auto">
-                <div class="text-center text-[12px] md:text-[16px] text-green font-normal leading-normal">Instagram</div>
-              </div>
-          </div>
-      </div>
-      </div>
-    </div>
-    
-  </div>
-  
 
+          <div class="sm:hidden flex flex-1 justify-end items-center">
+            <img src="assets/menu.svg" alt="menu_icon" class="w-[28px] h-[28px] object-contain cursor-pointer" id="nav_icon" onclick="nav()">
+            <div class="hidden p-6 beige-gradient absolute top-[60px] right-0 mx-4 my-2 z-10 rounded-xl" id="nav_list_mobile_devices">
+              <ul class="list-non flex justify-end items-start flex-col gap-4">
+                <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center">Oferta      
+                    <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                    </svg>
+                  </button>
+                  <div id="dropdownNavbar" class="hidden z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                    <ul class="py-2 text-sm text-inherit" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-black-100  hover:text-green 0">Projekty</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-black-100 hover:text-green">Wizualizacje</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 text-black-100 hover:text-green">Realizacje</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
+                  <a href="#OFirmie">O firmie</a>
+                </li>
+                <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
+                  <a href="#Realizacje" >Realizacje</a>
+                </li>
+                <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
+                  <a href="#Kontakt" >Kontakt</a>
+                </li>
+                <li class="text-black-100 hover:text-white text-[14px] font-medium font-inter cursos-pointer">
+                  <a href="#loop" >
+                    <img src="assets/loop.svg" alt="loop">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Loop button in the navbar-->
+        <div id="loopSearch"class="py-2 hidden">
+          <form class="flex items-end justify-end">   
+            <label for="voice-search" class="sr-only">Wyszukaj</label>
+            <div class="relative w-1/2">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.15 5.6h.01m3.337 1.913h.01m-6.979 0h.01M5.541 11h.01M15 15h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 2.043 11.89 9.1 9.1 0 0 0 7.2 19.1a8.62 8.62 0 0 0 3.769.9A2.013 2.013 0 0 0 13 18v-.857A2.034 2.034 0 0 1 15 15Z"/>
+                </svg>
+            </div>
+            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 " placeholder="Wyszukaj" required>
+            </div>
+            <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              <svg class="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+              </svg>Search
+            </button>
+          </form>
+        </div>
+      </nav>
+  
+      <section class="relative w-full h-screen mx-auto grid md:grid-cols-2 gap-4 bg-beige translate-x-0 slide" id="hero">
+        <div class="md:col-span-1 relative">
+          <div class="h-full w-full absolute flex items-center justify-center">
+            <div class="w-full flex-col sm:px-20 px-6 pt-24 md:py-28 inline-flex">
+              <div class="self-stretch flex-col gap-4 md:gap-7 flex justify-center items-center">
+                <div class="self-stretch text-neutral-900 text-3xl md:text-6xl font-montserrat leading-15 text-start">Nowoczesna<br> aranżacja<br>Twojego ogrodu</div>
+                <div class="self-stretch text-neutral-900 text-[12px] md:text-[16px] font-montserrat leading-normal text-start">
+                  Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
+                </div>
+                <div class="justify-start items-start sm:gap-4 gap-6 inline-flex mb-3">
+                  <div class="px-6 pt-3 pb-3.5 bg-green rounded-full justify-start items-center gap-2.5 flex h-[25px] md:h-[40px] w-auto">
+                    <button class="text-center text-[11px] md:text-[16px] text-white font-normal leading-normal">Skontaktuj się z nami</button>
+                  </div>
+                  <div class="px-5 pt-3 pb-3.5 rounded-full border border-green justify-start items-center gap-2 flex h-[25px] md:h-[40px] w-auto">
+                    <button class="text-center text-[11px] md:text-[16px] text-green font-normal leading-normal">Zobacz nasze realizacje</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-1 relative">
+          <div class="h-full w-full absolute flex items-center justify-center">
+            <img src="assets/Hero_background.png" alt="" class="object-cover h-full w-full">
+            <div class="absolute bottom-0 right-0 gap-11">
+              <div class="space-x-4 md:space-x-8 justify-center items-center inline-flex bg-white w-[100px] md:w-[192px] h-[70px] md:h-[96px]">
+                <img class="w-[30px] md:w-[48px] h-[30px] md:h-[48px]" src="assets/left_arrow.png" alt="">
+                <img class="w-[30px] md:w-[48px] h-[30px] md:h-[48px]"  src="assets/right_arrow.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section Oferta-->
+      <div id="Oferta" class="relative w-full md:h-screen sm:px-20 px-6 bg-white-200 pt-[70px]">
+        <div id="ofertaInfo" class="sm:px-20">
+          <p class="font-inter text-[12px] text-green">Oferta</p>
+          <h2 class="font-montserrat text-3xl md:text-6xl">Działamy <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">kompleksowo</span></h2>
+          <div class="sm:w-[550px] mt-5">
+            <p class="font-inter  text-[12px] md:text-[14px]">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
+          </div>
+        </div>
+        <div class="mt-11 flex flex-wrap gap-14">
+          <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
+              <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
+                <img src="assets/projekty.svg" alt="Web Developer" class="w-7 h-7 object-contain mb-5">              
+                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Projekty</h3>
+                <p class="text-inherit text-[12px] leading-tight mb-10">Zaprojektujemy Twój ogród w nowoczesnym stylu z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+                <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>  
+              </div>
+            </div>
+          </div>
+          <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
+              <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
+                <img src="assets/wizualizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
+                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Wizualizacje</h3>
+                <p class="text-inherit text-[12px] leading-tight mb-10">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologi 3D.</p>
+                <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>
+              </div>
+            </div>
+          </div>
+          <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card mb-3" style="opacity: 1; transform: none;">
+              <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
+                <img src="assets/realizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
+                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Realizacje</h3>
+                <p class="text-inherit text-[12px] leading-tight mb-10">Zrealizuj Twoje marzenia przy użyciu najnowszych rozwiązań i zaawansowanych techonologi.</p>
+                <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section O firmie -->
+      <div id="OFirmie" class="bg-green relative w-full md:h-screen grid md:grid-cols-2 gap-4">
+        <div class="md:col-span-1 relative">
+          <div class="h-full w-full absolute flex items-center justify-center">
+            <img src="assets/O_Firmie.png" alt="" class="object-cover h-full w-full">
+          </div>
+        </div>
+        <div class="md:col-span-1 relative pt-[70px]">
+          <div id="ofertaInfo" class="sm:px-20 px-6">
+            <p class="font-inter text-[12px] text-white">O firmie</p>
+            <h2 class=" text-white font-montserrat text-3xl md:text-6xl">Tworzymy <br><span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">z pasją</span></h2>
+            <div class="sm:w-[500px] mt-5 mb-10">
+              <p class="text-white font-inter  text-[12px] md:text-[14px]">Każdy projekt to nowe wyzwanie, Dlatego nasz zespół tworzą wykwalifikowani projektancji oraz architekcji, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne,które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
+            </div>
+            <div class="justify-start items-start inline-flex mb-3">
+              <div class="px-6 pt-3 pb-3.5 bg-green rounded-full border border-white justify-start items-center gap-2.5 flex h-[25px] md:h-[40px] w-auto">
+              <div class="text-center text-[12px] md:text-[16px] text-white font-normal leading-normal">Poznaj nas bliżej -></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    
+      <!-- Realizacje section -->
+      <div id="Realizacje" class="relative w-full h-auto sm:px-20 px-6 bg-white-200 pt-[70px]">
+        <p class="font-inter text-[12px] text-green">Realizacje</p>
+        <h2 class="font-montserrat text-3xl md:text-6xl">Nasze <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">projekty</span></h2>
+          <div class="grid mt-20" id="grid-realizacja">
+            <div class="grid-item"><img src="assets/img1.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img2.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img3.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img4.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img5.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img6.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img7.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img8.png" alt=""></div>
+            <div class="grid-item"><img src="assets/img9.png" alt=""></div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Kontakt Section -->
+      <div id="Kontakt" class="realtive bg-white w-full h-auto">
+        <div class="sm:px-20 px-6 py-10 items-center justify-center">
+          <div class="bg-green rounded-[20px] py-10 px-7 min-h-[260px] flex justify-center items-center">
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div class="col-span-2 p-4 rounded-lg text-white-200  text-[20px] md:text-[40px]">
+                  <p class="font-montserrat font-normal leading-120 tracking-tight">Zostańmy w kontakcie!</p>
+                  <p class="font-montserrat font-normal leading-120 tracking-tight">Znajdź nas na <span class="tracking-wide text-inherit italic">Instagramie</span>.</p>
+              </div>
+              <div class="col-span-1 bg-green-500 p-4 rounded-lg text-white-200 text-[11px] md:text-[16px]">
+                  <p class="font-montserrat-400 leading-120">Śledz nasze</p>
+                  <p>najnowsze realizacje</p>
+                  <div class="sm:gap-3 gap-6 inline-flex mt-5">
+                    <div class="text-center justify-center bg-white-200 rounded-full items-center gap-2.5 flex h-[20px] md:h-[46px] w-[80px] md:w-[124px]">
+                    <div class="text-[12px] md:text-[16px] text-green font-normal leading-normal">Instagram</div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!-- Footer -->
+      <footer class="relative w-full h-auto items-center" style="background: black;">
+        <div class="sm:px-20 px-6 py-10 items-center justify-center flex-row gap-8">
+          <div class=" w-full flex justify-between max-w-7xl mx-auto gap-2 md:gap-8">
+            <img src="assets/giarddesignwhite.svg" alt="">\
+            <div class="justify-end float-right inline-flex">
+              <p class="text-white text-[10px] md:text-[16px]">Daj znać co możemy dla Ciebie zrobić!</p>
+              <div class="px-5 pt-3 pb-3.5 rounded-full justify-start items-center flex h-[40px] w-auto bg-green">
+                <button class="text-[12px] md:text-[16px] text-white items-center font-normal leading-normal">Skontaktuj się z nami</button>
+              </div>  
+            </div>
+          </div>
+          <hr class="my-5 md:my-10">
+          <div class="w-full flex justify-between max-w-7xl mx-auto">
+            <ul class="list-non flex flex-row gap-2 md:gap-8 font-medium">
+              <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
+                <a href="#">Kontakt</a>
+              </li>
+              <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
+                <a href="#">Instagram</a>
+              </li>
+              <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
+                <a href="#">Facebook</a>
+              </li>
+              <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
+                <a href="#">LinkedIn</a>
+              </li>
+            </ul>
+
+            <ul class="list-non flex flex-row gap-2 md:gap-8 font-medium">
+              <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
+                <a href="#">000-000-000</a>
+              </li>
+              <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
+                <a href="#">giarddesign@kontakt.pl</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full flex justify-between max-w-7xl mx-auto mt-5 md:mt-10">
+            <span class="block text-sm text-white-200 text-[11px] md:text-[16px]">Prawa zastrzożone &copy; 2022</span>
+            <p class="text-white inline-flex gap-2 text-[11px] md:text-[16px]">made by <img class="h-[15px] md:h-[23px]" src="assets//adrespect.svg"></p>
+          </div> 
+        </div>    
+      </footer>
+    </div>
   </div>
-  <script type="module" src="js/main.js"></script>
-  <!-- <script>
+  <!-- <script type="module" src="js/main.js"></script> -->
+  <script>
     function nav(){
       if($('#nav_list_mobile_devices').hasClass("hidden")){
         $('#nav_list_mobile_devices').removeClass("hidden")
@@ -271,6 +329,13 @@
       $('#dropdownNavbar').addClass('hidden')
     }
   })
+  // $('#dropdownNavbarLink').hover(function(){
+  //   if($('#dropdownNavbar').hasClass("hidden")){
+  //     $('#dropdownNavbar').removeClass('hidden')
+  //   }else{
+  //     $('#dropdownNavbar').addClass('hidden')
+  //   }
+  // })
   
   function loopClick(){
     if($("#loopSearch").hasClass("hidden")){
@@ -280,7 +345,7 @@
     }
   }
   
-  </script> -->
+  </script>
 </body>
 
 </html>

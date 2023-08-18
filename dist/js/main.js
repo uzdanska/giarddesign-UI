@@ -25,9 +25,17 @@ function loopClick(){
   }
 }
 
-import Masonry from 'masonry-layout';
-window.onload = () => {
-    const grid = document.getElementById('.grid-realizacja')
-    console.log(grid)
-    const masonry = new Masonry(grid);
-};
+const masonry = new Macy({
+  container: '#grid-realizacja',
+  mobileFirst: true,
+  columns: 1,
+  breakAt: {
+    400: 1,
+    700: 2,
+    1100: 3,
+  },
+  margin: {
+    x: 20,
+    y: 20,
+  }
+});

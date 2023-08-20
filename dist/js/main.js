@@ -1,7 +1,7 @@
 function hide_show_menu(){
   if($('#nav_list_mobile_devices').hasClass("hidden")){
     $('#nav_list_mobile_devices').removeClass("hidden")
-    $('#nav_icon').prop('src', 'assets/close.svg')
+    $('#nav_icon').prop('src', 'dist/assets/close.svg')
   }
   else{
     $('#nav_list_mobile_devices').addClass("hidden")

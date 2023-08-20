@@ -20,7 +20,7 @@
           <!-- Primary Navbar items -->
           <ul id="navbar-multi-level" class="list-non hidden sm:flex flex-row gap-8 font-medium">
             <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-              <a data-dropdown-toggle="dropdownNavbar" class="dropdownNavbarLink flex items-center" href="#Oferta">Oferta      
+              <a data-dropdown-toggle="dropdownNavbar" class="dropdownNavbarLink flex items-center" href="#">Oferta      
                 <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
                 </svg>
@@ -29,13 +29,13 @@
               <div id="dropdownNavbar" class="hidden z-10 font-normal bg-white rounded-lg shadow w-auto">
                 <ul class="py-1 text-sm text-inherit inline-flex" aria-labelledby="dropdownLargeButton">
                   <li>
-                    <a href="#Oferta" class="block px-4 py-2 text-black-100  hover:text-green 0">Projekty</a>
+                    <a href="#Oferta" if="Projekty" class="block px-2 py-2 text-black-100  hover:text-green 0 text-[14px]">Projekty</a>
                   </li>
                   <li>
-                    <a href="#Oferta" class="block px-4 py-2 text-black-100 hover:text-green ">Wizualizacje</a>
+                    <a href="#Oferta" class="Wizualizacje block px-2 py-2 text-black-100 hover:text-green text-[14px]">Wizualizacje</a>
                   </li>
                   <li>
-                    <a href="#Oferta" class="block px-4 py-2 text-black-100 hover:text-green ">Realizacje</a>
+                    <a href="#Oferta" class="Realizacje block px-2 py-2 text-black-100 hover:text-green text-[14px]">Realizacje</a>
                   </li>
                 </ul>
               </div>
@@ -50,7 +50,7 @@
               <a href="#Kontakt">Kontakt</a>
             </li>
             <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-              <a href="#" onclick="loopClick()">
+              <a href="#" class="Loop">
                 <img src="assets/loop.svg" alt="loop">
               </a>
             </li>
@@ -61,36 +61,36 @@
             <div class="hidden p-6 bg-white absolute top-[55px] right-0 mx-4 my-2 z-10 rounded-lg" id="nav_list_mobile_devices">
               <ul class="list-non flex justify-end items-start flex-col gap-4">
                 <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-                  <button data-dropdown-toggle="dropdownNavbar" class="dropdownNavbarLinkMobile flex items-center">Oferta      
+                  <button data-dropdown-toggle="dropdownNavbar" class="dropdownNavbarLinkMobile flex items-center py-1">Oferta      
                     <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
                     </svg>
                   </button>
-                  <div id="dropdownNavbarMobile" class="hidden z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                  <div id="dropdownNavbarMobile" class="hidden z-10 font-normal bg-white w-auto">
                     <ul class="py-2 text-sm text-inherit" aria-labelledby="dropdownLargeButton">
                       <li>
                         <a href="#Oferta" class="block px-4 py-2 text-black-100  hover:text-green 0">Projekty</a>
                       </li>
                       <li>
-                        <a href="#Wizualizacje" class="block px-4 py-2 text-black-100 hover:text-green">Wizualizacje</a>
+                        <a href="#Oferta" class="block px-4 py-2 text-black-100 hover:text-green">Wizualizacje</a>
                       </li>
                       <li>
-                        <a href="#Realizacje" class="block px-4 py-2 text-black-100 hover:text-green">Realizacje</a>
+                        <a href="#Oferta" class="block px-4 py-2 text-black-100 hover:text-green">Realizacje</a>
                       </li>
                     </ul>
                   </div>
                 </li>
-                <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+                <li class="nav_links_mobile text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
                   <a href="#OFirmie">O firmie</a>
                 </li>
-                <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+                <li class="nav_links_mobile text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
                   <a href="#Realizacje" >Realizacje</a>
                 </li>
-                <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+                <li class="nav_links_mobile text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
                   <a href="#Kontakt" >Kontakt</a>
                 </li>
-                <li class="text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
-                  <a href="#loop" >
+                <li class="nav_links_mobile text-black-100 hover:text-beige text-[14px] font-medium font-inter cursos-pointer">
+                  <a href="#loop" class="LoopMobile">
                     <img src="assets/loop.svg" alt="loop">
                   </a>
                 </li>
@@ -104,22 +104,22 @@
             <label for="voice-search" class="sr-only">Wyszukaj</label>
             <div class="relative w-1/2">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.15 5.6h.01m3.337 1.913h.01m-6.979 0h.01M5.541 11h.01M15 15h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 2.043 11.89 9.1 9.1 0 0 0 7.2 19.1a8.62 8.62 0 0 0 3.769.9A2.013 2.013 0 0 0 13 18v-.857A2.034 2.034 0 0 1 15 15Z"/>
                 </svg>
             </div>
-            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 " placeholder="Wyszukaj" required>
+            <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:beige focus:beige block w-full pl-10 p-2.5 " placeholder="Wyszukaj" required>
             </div>
-            <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+            <button type="submit" id="Sumbit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-beige rounded-lg border border-beigehover:bg-beige focus:ring-4 focus:outline-none focus:ring-beige">
               <svg class="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-              </svg>Search
+              </svg>Wyszukaj
             </button>
           </form>
         </div>
       </nav>
   
-      <section class="relative w-full h-screen mx-auto grid md:grid-cols-2 gap-4 bg-beige translate-x-0 slide" id="herosection2">
+      <section class="hero-section relative w-full h-screen mx-auto grid md:grid-cols-2 gap-4 bg-beige translate-x-0 slide" >
         <div class="md:col-span-1 relative">
           <div class="h-full w-full absolute flex items-center justify-center">
             <div class="w-full flex-col sm:px-20 px-6 pt-24 md:py-28 inline-flex">
@@ -145,14 +145,28 @@
             <img src="assets/Hero_background.png" alt="" class="object-cover h-full w-full">
             <div class="absolute bottom-0 right-0 gap-11">
               <div class="space-x-4 md:space-x-8 justify-center items-center inline-flex bg-white w-[100px] md:w-[192px] h-[70px] md:h-[96px]">
-                <img class="w-[30px] md:w-[48px] h-[30px] md:h-[48px]" src="assets/left_arrow.png" alt="">
-                <img class="w-[30px] md:w-[48px] h-[30px] md:h-[48px]"  src="assets/right_arrow.png" alt="">
+                <img class="prev w-[30px] md:w-[48px] h-[30px] md:h-[48px]" src="assets/left_arrow.png" alt="">
+                <img class="next w-[30px] md:w-[48px] h-[30px] md:h-[48px]"  src="assets/right_arrow.png" alt="">
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="hidden relative w-full h-screen mx-auto grid md:grid-cols-2 gap-4 bg-beige translate-x-0 slide" id="hero">
+
+
+      <!-- Dodane w celu pokazania działania funkcjonalności-->
+      <section class="hero-section hidden relative w-full h-screen mx-auto grid md:grid-cols-2 gap-4 bg-beige translate-x-0 slide" >
+        <div class="md:col-span-1 relative">
+          <div class="h-full w-full absolute flex items-center justify-center">
+            <img src="assets/Hero_background.png" alt="" class="object-cover h-full w-full">
+            <div class="absolute bottom-0 left-0 gap-11">
+              <div class="space-x-4 md:space-x-8 justify-center items-center inline-flex bg-white w-[100px] md:w-[192px] h-[70px] md:h-[96px]">
+                <img class="prev w-[30px] md:w-[48px] h-[30px] md:h-[48px]" src="assets/left_arrow.png" alt="">
+                <img class="next w-[30px] md:w-[48px] h-[30px] md:h-[48px]"  src="assets/right_arrow.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="md:col-span-1 relative">
           <div class="h-full w-full absolute flex items-center justify-center">
             <div class="w-full flex-col sm:px-20 px-6 pt-24 md:py-28 inline-flex">
@@ -162,8 +176,8 @@
                   Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
                 </div>
                 <div class="justify-start items-start sm:gap-4 gap-6 inline-flex mb-3">
-                  <div class="px-6 pt-3 pb-3.5 bg-green rounded-full justify-start items-center gap-2.5 flex h-[25px] md:h-[40px] w-auto">
-                    <button class="text-center text-[11px] md:text-[16px] text-white font-normal leading-normal">Skontaktuj się z nami</button>
+                  <div class="justify-start items-center gap-2.5 flex h-[25px] md:h-[40px] w-auto" id="Contact-btn">
+                    <button class="px-6 pt-3 pb-3.5 bg-green hover:bg-white rounded-full text-center text-[11px] md:text-[16px] text-white font-normal leading-normal">Skontaktuj się z nami</button>
                   </div>
                   <div class="px-5 pt-3 pb-3.5 rounded-full border border-green justify-start items-center gap-2 flex h-[25px] md:h-[40px] w-auto">
                     <button class="text-center text-[11px] md:text-[16px] text-green font-normal leading-normal">Zobacz nasze realizacje</button>
@@ -173,21 +187,11 @@
             </div>
           </div>
         </div>
-        <div class="md:col-span-1 relative">
-          <div class="h-full w-full absolute flex items-center justify-center">
-            <img src="assets/Hero_background.png" alt="" class="object-cover h-full w-full">
-            <div class="absolute bottom-0 right-0 gap-11">
-              <div class="space-x-4 md:space-x-8 justify-center items-center inline-flex bg-white w-[100px] md:w-[192px] h-[70px] md:h-[96px]">
-                <img class="w-[30px] md:w-[48px] h-[30px] md:h-[48px]" src="assets/left_arrow.png" alt="">
-                <img class="w-[30px] md:w-[48px] h-[30px] md:h-[48px]"  src="assets/right_arrow.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
+
     
-      <!-- Section Oferta-->
-      <div id="Oferta" class="relative w-full h-auto sm:px-20 px-6 bg-white-200 pt-[70px]">
+      <!-- Oferta-->
+      <section id="Oferta" class="relative w-full h-auto md:h-screen sm:px-20 px-6 bg-white-200 pt-[30px] md:pt-[70px] pb-[30px] md:pb-[70px]">
         <div id="ofertaInfo" class="sm:px-20">
           <p class="font-inter text-[12px] text-green">Oferta</p>
           <h2 class="font-montserrat text-3xl md:text-6xl">Działamy <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">kompleksowo</span></h2>
@@ -195,49 +199,100 @@
             <p class="font-inter  text-[12px] md:text-[14px]">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
           </div>
         </div>
-        <div class="mt-11 flex flex-wrap gap-14">
-          <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-            <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
+        <div class="mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Project view front -->
+          <div id="Project" class="w-[310px] md:w-[350px] w-full">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card  cursor-pointer border Project_btn" style="opacity: 1; transform: none;">
               <div class="bg-white rounded-[20px] py-10 px-7 min-h-[250px] flex justify-items-start items-start flex-col">
-                <img src="assets/projekty.svg" alt="Web Developer" class="w-7 h-7 object-contain mb-5">              
-                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Projekty</h3>
+                <img src="assets/projekty.svg" class="w-7 h-7 object-contain mb-5">              
+                <h3 id="Project-title" class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Projekty</h3>
                 <p class="text-inherit text-[12px] leading-tight mb-10">Zaprojektujemy Twój ogród w nowoczesnym stylu z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
-                <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>  
+                <p class="text-green text-[16px] inline-flex relative gap-2 cursor-pointer">
+                  Dowiedz się więcej
+                  <span class="absolute bottom-[-5px] left-0 w-full border-b-2 border-green"></span>
+                  <span class="img-container w-[16px] h-[16px] my-auto">
+                    <img src="assets/arrow_right.svg" alt="">
+                  </span>
+                </p>
               </div>
             </div>
           </div>
-          <div id="Wizualizacje" class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-            <div class="w-full p-[1px] rounded-[20px] shadow-card" style="opacity: 1; transform: none;">
+
+          <!-- Project after click  -->
+          <div id="Project_after" class="w-[310px] md:w-[350px] w-full hidden">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card  cursor-pointer border Project_btn" style="opacity: 1; transform: none;">
+              <div class="bg-white rounded-[20px] py-5 px-7 min-h-[250px] flex justify-items-start items-start flex-col">          
+                <h3 id="Project-title" class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Projekty</h3>
+                <img src="assets/img2.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div id="Visualizations" class="w-[310px] md:w-[350px] w-full">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card  border Visualizations_btn"  style="opacity: 1; transform: none; ">
               <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
-                <img src="assets/wizualizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
-                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Wizualizacje</h3>
+                <img src="assets/wizualizacje.svg" class="w-7 h-7 object-contain mb-5">
+                <h3 id="Visualizations-title" class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Wizualizacje</h3>
                 <p class="text-inherit text-[12px] leading-tight mb-10">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologi 3D.</p>
-                <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>
+                <p class="text-green text-[16px] inline-flex relative gap-2 cursor-pointer">
+                  Dowiedz się więcej
+                  <span class="absolute bottom-[-5px] left-0 w-full border-b-2 border-green"></span>
+                  <span class="img-container w-[16px] h-[16px] my-auto">
+                    <img src="assets/arrow_right.svg" alt="">
+                  </span>
+                </p>
               </div>
             </div>
           </div>
-          <div class="xs:w-[310px] w-full" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
-            <div class="w-full p-[1px] rounded-[20px] shadow-card mb-3" style="opacity: 1; transform: none;">
+
+          <div id="Visualizations_after" class="w-[310px] md:w-[350px] w-full hidden">
+            <div class="w-full p-[1px] rounded-[20px] shadow-card  border Visualizations_btn"  style="opacity: 1; transform: none; ">
               <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
-                <img src="assets/realizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
-                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Realizacje</h3>
+                <img src="assets/wizualizacje.svg" class="w-7 h-7 object-contain mb-5">
+                <h3 id="Visualizations-title" class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3">Wizualizacje</h3>
+               <img src="assets/img3.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div id="Realizations" class="w-[310px] md:w-[350px] lg:[380px] w-full">
+            <div class="w-full rounded-[20px] shadow-card mb-3 border Realizations_btn ">
+              <div class="bg-white rounded-[20px] py-10 px-7 min-h-[260px] flex justify-items-start items-start flex-col">
+                <img src="assets/realizacje.svg" class="w-7 h-7 object-contain mb-5">
+                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3 "id="Realizations-title">Realizacje</h3>
                 <p class="text-inherit text-[12px] leading-tight mb-10">Zrealizuj Twoje marzenia przy użyciu najnowszych rozwiązań i zaawansowanych techonologi.</p>
-                <p class="underline text-green text-[14px]">Dowiedz się więcej -></p>
+                <p class="text-green text-[16px] inline-flex relative gap-2 cursor-pointer">
+                  Dowiedz się więcej
+                  <span class="absolute bottom-[-5px] left-0 w-full border-b-2 border-green"></span>
+                  <span class="img-container w-[16px] h-[16px] my-auto">
+                    <img src="assets/arrow_right.svg" alt="">
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="Realizations_after" class="w-[310px] md:w-[350px] w-full hidden">
+            <div class="w-full rounded-[20px] shadow-card mb-3 border Realizations_btn" style="opacity: 1; transform: none;">
+              <div class="bg-white rounded-[20px] py-10 px-7 pr-7 min-h-[260px] flex justify-items-start items-start flex-col">
+                <img src="assets/realizacje.svg" alt="React Native Developer" class="w-7 h-7 object-contain mb-5">
+                <h3 class="text-black-100 font-montserrat leading-[115%] text-[22px] text-start mb-3 "id="Realizations-title">Realizacje</h3>
+                <img src="assets/img7.png" alt="">
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Section O firmie -->
-      <div id="OFirmie" class="bg-green relative w-full md:h-auto grid md:grid-cols-2 gap-4 translate-x-0">
+      <div id="OFirmie" class="bg-green relative w-full md:h-auto md:grid md:grid-cols-2 gap-4 translate-x-0">
         <div class="md:col-span-1 relative">
-          <div class="h-full w-full absolute flex items-center justify-center">
+          <div class="h-full md:h-auto w-full relative">
             <img src="assets/O_Firmie.png" alt="" class="object-cover h-full w-full">
           </div>
         </div>
-        <div class="md:col-span-1 relative pt-[130px] pb-[130px]">
-          <div id="ofertaInfo" class="sm:px-20 px-6">
+        <div class="md:col-span-1 relative">
+          <div id="ofertaInfo" class="h-full sm:px-20 px-6 pt-[30px] pb-[30px] md:pt-[130px] md:pb-[130px]">
             <p class="font-inter text-[12px] text-white">O firmie</p>
             <h2 class=" text-white font-montserrat text-3xl md:text-6xl">Tworzymy <br><span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">z pasją</span></h2>
             <div class="sm:w-[500px] mt-5 mb-10">
@@ -245,7 +300,8 @@
             </div>
             <div class="justify-start items-start inline-flex mb-3">
               <div class="px-6 pt-3 pb-3.5 bg-green rounded-full border border-white justify-start items-center gap-2.5 flex h-[25px] md:h-[40px] w-auto">
-              <div class="text-center text-[12px] md:text-[16px] text-white font-normal leading-normal">Poznaj nas bliżej -></div>
+              <p class="text-center text-[12px] md:text-[16px] text-white font-normal leading-normal inline-flex gap-2">Poznaj nas bliżej 
+                <img src="assets/arrow_right_white.svg" alt=""></p>
             </div>
           </div>
         </div>
@@ -253,8 +309,8 @@
       </div>
     
       <!-- Realizacje section -->
-      <div id="Realizacje" class="relative w-full h-auto bg-white-200 pt-[70px]">
-        <div class="sm:px-20 px-6">
+      <div id="Realizacje" class="relative w-full h-auto bg-white-200">
+        <div class="sm:px-20 px-6 pt-[70px]">
            <p class="font-inter text-[12px] text-green">Realizacje</p>
             <h2 class="font-montserrat text-3xl md:text-6xl">Nasze <span class="italic font-inter font-medium text-3xl md:text-6xl font-italic leading-[115%]">projekty</span></h2>
         </div>
@@ -303,6 +359,7 @@
             </button>
           </div>
         </div>
+        <!-- Work only when the linear gradient disapear so after using button Rozwiń -->
         <div id="modal"
           class="hidden fixed top-10 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
 
@@ -326,7 +383,7 @@
                   <p>najnowsze realizacje</p>
                   <div class="sm:gap-3 gap-6 inline-flex mt-5">
                     <div class="text-center justify-center bg-white-200 rounded-full items-center gap-2.5 flex h-[20px] md:h-[46px] w-[80px] md:w-[124px]">
-                    <div class="text-[12px] md:text-[16px] text-green font-normal leading-normal">Instagram</div>
+                    <div class="text-[12px] md:text-[16px] text-green font-normal leading-normal cursor-pointer hover:font-semibold">Instagram</div>
                   </div>
               </div>
               </div>
@@ -342,8 +399,8 @@
             <img src="assets/giarddesignwhite.svg" alt="">\
             <div class="justify-end float-right inline-flex gap-2 md:gap-8">
               <p class="text-white text-[10px] md:text-[16px] my-auto">Daj znać co możemy dla Ciebie zrobić!</p>
-              <div class="px-5 pt-3 pb-3.5 rounded-full justify-start items-center flex h-[40px] w-auto bg-green">
-                <button class="text-[12px] md:text-[16px] text-white items-center font-normal leading-normal">Skontaktuj się z nami</button>
+              <div class="px-5 pt-3 pb-3.5 justify-start items-center flex h-[40px] w-auto bg-green rounded-full">
+                <button class="text-[12px] md:text-[16px] text-white items-center font-normal leading-normal hover:font-semibold">Skontaktuj się z nami</button>
               </div>  
             </div>
           </div>
@@ -351,25 +408,25 @@
           <div class="w-full flex justify-between max-w-7xl mx-auto">
             <ul class="list-non flex flex-row gap-2 md:gap-8 font-medium">
               <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
-                <a href="#">Kontakt</a>
+                <a href="">Kontakt</a>
               </li>
               <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
-                <a href="#">Instagram</a>
+                <a href="">Instagram</a>
               </li>
               <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
-                <a href="#">Facebook</a>
+                <a href="">Facebook</a>
               </li>
               <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
-                <a href="#">LinkedIn</a>
+                <a href="">LinkedIn</a>
               </li>
             </ul>
 
             <ul class="list-non flex flex-row gap-2 md:gap-8 font-medium">
               <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
-                <a href="#">000-000-000</a>
+                <a href="">000-000-000</a>
               </li>
               <li class="text-white-200 hover:text-beige text-[10px] md:text-[14px] font-medium font-inter cursos-pointer">
-                <a href="#">giarddesign@kontakt.pl</a>
+                <a href="">giarddesign@kontakt.pl</a>
               </li>
             </ul>
           </div>

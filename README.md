@@ -1,6 +1,6 @@
 # giarddesign-UI
 
-# You can see the project here: https://uzdanska.github.io/giarddesign-UI/
+### You can see the project here: https://uzdanska.github.io/giarddesign-UI/
 
 
 ## In the project, Tailwind CSS and jQuery have been used.

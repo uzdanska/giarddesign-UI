@@ -1,9 +1,12 @@
 # giarddesign-UI
 
-## W projekcie został użyty Tailwind CSS i JQuery
+# You can see the project here: https://uzdanska.github.io/giarddesign-UI/
 
-### Uruchomienie
 
-#### 1. Przejście do lokalizacji projektu
-#### 2. Użycie komendy ```npx tailwindcss -i ./src/input.css -o ./dist/css/style.css --watch``` w terminalu
-#### 3. Otworzenie pliku index.html i użycie dodatku 'Live Server'
+## In the project, Tailwind CSS and jQuery have been used.
+
+
+#### 1. Navigate to the project directory.
+#### 2. Use the command npx tailwindcss -i ./src/input.css -o ./dist/css/style.css --watch in the terminal.
+#### 3. Open the index.html file and use the 'Live Server' extension
+
